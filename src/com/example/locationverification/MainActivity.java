@@ -5,77 +5,59 @@ import java.util.Arrays;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
-<<<<<<< HEAD
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         
         getActionBar().hide();
+//        InputStream inputStream = getResources().openRawResource(
+//				R.raw.hackathon_location_data);
+//		CSVFile csvFile = new CSVFile(inputStream);
+//		List<Object[]> scoreList = csvFile.read();
+//
+//		for(Object[] obj : scoreList){
+//			
+//			String houseId0 = String.valueOf(obj[0]);
+//			String houseId1 = String.valueOf(obj[1]);
+//			String houseId2 = String.valueOf(obj[2]);
+//			
+//			Log.i("main", houseId0 + " "+houseId1 +" "+houseId2);
+//		}
+		
+		final EditText loc = (EditText) findViewById(R.id.editloc);
+		Button locsearch = (Button) findViewById(R.id.locSearch);
+		Button currentLoc = (Button) findViewById(R.id.currentloc);
+		
+		locsearch.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, Map2Activity.class);
+				intent.putExtra("location", loc.getText().toString());
+				startActivity(intent);
+			}
+		});
+		
+		currentLoc.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(MainActivity.this, MapActivity.class));
+			}
+		});
     }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-=======
-	
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-
-		InputStream inputStream = getResources().openRawResource(
-				R.raw.hackathon_location_data);
-		CSVFile csvFile = new CSVFile(inputStream);
-		List<Object[]> scoreList = csvFile.read();
-
-		for(Object[] obj : scoreList){
-			String houseId = String.valueOf(obj[2]);
-			Log.i("main", houseId);
-		}
-	}
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
->>>>>>> a4116e45f82e361074ec211f404d7f9502ea476d
 }

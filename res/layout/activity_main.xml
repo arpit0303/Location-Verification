@@ -9,7 +9,7 @@
     tools:context="com.example.locationverification.MainActivity" >
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editloc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView1"
@@ -17,22 +17,40 @@
         android:layout_marginTop="20dp"
         android:hint="Locality Name" />
 
+    <Button
+        android:id="@+id/locSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editloc"
+        android:layout_below="@+id/editloc"
+        android:text="Location Search" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locSearch"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:text="OR"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/currentloc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="Current Location Search" />
+
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="29dp"
         android:src="@drawable/ic_launcher" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
-        android:layout_below="@+id/editText3"
-        android:layout_marginTop="36dp"
-        android:text="Submit" />
 
 </RelativeLayout>

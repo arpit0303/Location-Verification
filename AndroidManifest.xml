@@ -9,7 +9,7 @@
         android:required="true" />
 
     <uses-sdk
-        android:minSdkVersion="14"
+        android:minSdkVersion="16"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -47,6 +47,10 @@
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name=".Map2Activity"
+            android:label="@string/title_activity_map2" >
         </activity>
     </application>
 
