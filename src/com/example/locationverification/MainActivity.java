@@ -25,7 +25,7 @@ public class MainActivity extends Activity {
 		List<Object[]> scoreList = csvFile.read();
 
 		for(Object[] obj : scoreList){
-			String houseId = String.valueOf(obj[3]);
+			String houseId = String.valueOf(obj[2]);
 			Log.i("main", houseId);
 		}
 	}
