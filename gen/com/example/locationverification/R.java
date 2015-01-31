@@ -416,14 +416,14 @@ containing a value of this type.
         public static final int buy_now=0x7f0b000f;
         public static final int buy_with_google=0x7f0b0010;
         public static final int classic=0x7f0b0011;
-        public static final int editText1=0x7f0b0015;
+        public static final int editText1=0x7f0b0014;
         public static final int editText2=0x7f0b0016;
         public static final int editText3=0x7f0b0017;
         public static final int grayscale=0x7f0b0012;
         public static final int holo_dark=0x7f0b0005;
         public static final int holo_light=0x7f0b0006;
         public static final int hybrid=0x7f0b0000;
-        public static final int imageView1=0x7f0b0014;
+        public static final int imageView1=0x7f0b0015;
         public static final int map=0x7f0b0019;
         public static final int match_parent=0x7f0b000c;
         public static final int monochrome=0x7f0b0013;
